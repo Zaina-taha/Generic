@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+
+    .site-header {
+    background-color:gray;
+    display: flex;
+    min-height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+   }
+footer {
+  
+  padding: 3px;
+ text-align: start;
+  background-color: grey;
+  color:white;
+}
+
+         .container {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+
+        }
+        .MainSection{
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .LeftSection {
+            background-color:darksalmon;
+            padding: 5rem;
+            padding-top: 150px;
+            align-items: center;
+           
+
+        }
+
+        .section1 {
+            background-color:lightsalmon;
+            padding-top: 3rem;
+            text-align: center;
+            padding-top: 100px;
+            padding-bottom: 50px;
+           
+
+        }
+        .section2{
+            background-color:salmon;
+            padding-top: 3rem;
+            text-align: center;
+            padding-bottom: 50px;
+            padding-top: 100px;
+            
+        }
+      
+
+
+</style>
+      <script type="text/javascript">
+        var list = new Array();
+        var counter = 0;
+
+        function AddContent() {
+            list[counter] = "Line " + counter +"<br>";
+            counter += 1;
+            document.getElementById("lineContent").innerHTML = list;
+        };
+        function Reset() {
+            document.getElementById("lineContent").innerHTML= "";
+               
+        }
+        
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div >
+            Header section height is dynamic with minimum height 60px.depends on its content <br>
+        <button onclick="AddContent()">Add Content</button>
+        <button onclick="Reset()"> Delete dynamic content</button>
+        <div >Dynamic content</div>
+        <div id="lineContent"></div>
+        
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="LeftSection">
+            Left Section
+        </div>
+
+        <div class="MainSection">
+            <div class="section1">Main Section1</div>
+            <div class="section2">Main Section2</div>
+        </div>
+
+    </div>
+    
+      <footer>
+       <div>Footer Section</div>
+      </footer>
+    
+</body>
+</html>
